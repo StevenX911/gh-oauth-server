@@ -1,0 +1,18 @@
+{
+    "apps" : [
+        {
+            "name"      : "tripfe_admin",
+            "max_memory_restart": "250M",
+            "script"    : "server.js",
+            "log_date_format": "YYYY-MM-DD HH:mm Z",
+            "out_file" : "./pm2log/out.log",
+            "error_file" : "./pm2log/error.log",
+            "instances"  : 1,
+            "merge_logs": true,
+            "exec_mode"  : "cluster",
+            "env": {
+                "NODE_ENV": "production"
+            }
+        }
+    ]
+ }
